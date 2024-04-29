@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import MovieList from './MoviesList';
+import Filter from './Filter';
 import './App.css';
 
-function App() {
+
+const App = () => {
+  const [titleFilter, setTitleFilter] = useState('');
+  const [rateFilter, setRateFilter] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Filter
+        title={titleFilter}
+        rate={rateFilter}
+        setTitle={setTitleFilter}
+        setRate={setRateFilter}
+      />
+      <MovieList titleFilter={titleFilter} rateFilter={rateFilter} />
     </div>
   );
-}
+};
 
 export default App;

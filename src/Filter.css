@@ -1,0 +1,29 @@
+/* Filter.css */
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter input[type="text"],
+  .filter input[type="number"],
+  .filter button {
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .filter button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter button:hover {
+    background-color: #0056b3;
+  }
+  
